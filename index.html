@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <title>routes</title>
+      <script type = "text/javascript" src = "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.6/vue-router.js"></script>
+   </head>
+   <body>
+      <div id = "app1">
+          <h1>test routing</h1>
+          <p>
+             <router-link to = "/route1">test link 1</router-link>
+             <router-link to = "/route2">test link 2</router-link>
+          </p>
+          <router-view></router-view>
+      </div>
+       <script>
+         const Route1={template:"<div><p>This is route 1 demo</p></div>"}
+         const Route2={template:"<div><p>This is route 2 demo</p></div>"}
+         const routes=[
+           {path:'/route1',component:Route1},
+           {path:'/route2',component:Route2}
+         ]
+         const router=new VueRouter({
+           routes
+         });
+         var vm=new Vue({
+           el:'#app1',
+           router
+         })
+       </script>
+   </body>
+</html>
