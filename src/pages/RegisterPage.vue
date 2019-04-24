@@ -1,9 +1,11 @@
 <template>
     <div>
+      <form>
        Username:<input v-model="username" placeholder="Enter username here">
        Password:<input v-model="password" placeholder="Enter password here">
        Email:<input v-model="email" placeholder="Enter email here">
        <button v-on:click="register">Register</button>
+      </form>
     </div>
 </template>
 <script>

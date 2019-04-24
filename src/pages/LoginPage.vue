@@ -26,6 +26,10 @@ export default {
       }
       if (flag === 1) {
         alert('valid user')
+        var users = []
+        users.push({'username': this.username, 'loggedIn': true})
+        sessionStorage.setItem('logged_user', JSON.stringify(users))
+        this.$router.push({ path: '/dashboard' })
       } else {
         alert('invalid user')
       }

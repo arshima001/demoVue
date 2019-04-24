@@ -1,8 +1,5 @@
 export default {
-  user () {
-    return this.$store.state.user
-  },
   check () {
-    return localStorage.getItem('users')
+    return sessionStorage.getItem('logged_user')
   }
 }
